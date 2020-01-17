@@ -1,0 +1,12 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<% if @users.blank? %>
+  <h3>There are no users in the table yet.</h3>
+<% else %>
+  <% @users.each do |user| %>
+    <p><%= user.email %></p>
+  <% end %>
+<% end %>
+
+<%= link_to "NEW USER", new_user_url %>
